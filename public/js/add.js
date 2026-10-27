@@ -1,4 +1,4 @@
-import { getJson } from "./api.js";
+import { getJson, usingPreviewData } from "./api.js";
 import { createBookCard, setStatus } from "./render.js";
 
 const form = document.querySelector("#book-form");
@@ -16,6 +16,9 @@ if (form && categorySelect && feedback && preview && submitButton) {
       option.textContent = category.name;
       return option;
     }));
+    if (usingPreviewData) {
+      setStatus(feedback, "Демо-режим: новые книги сохраняются только в этом браузере.");
+    }
   } catch (error) {
     setStatus(feedback, "Не удалось загрузить категории. Обновите страницу перед отправкой.", "error");
     categorySelect.disabled = true;
@@ -54,7 +57,10 @@ if (form && categorySelect && feedback && preview && submitButton) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(book),
       });
-      setStatus(feedback, `Книга «${created.title}» добавлена в каталог.`, "success");
+      const message = created.previewOnly
+        ? `Демо-книга «${created.title}» сохранена в этом браузере.`
+        : `Книга «${created.title}» добавлена в каталог.`;
+      setStatus(feedback, message, "success");
       preview.append(createBookCard(created));
       form.reset();
     } catch (error) {

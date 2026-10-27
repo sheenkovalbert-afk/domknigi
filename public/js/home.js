@@ -1,4 +1,4 @@
-import { getJson } from "./api.js";
+import { getJson, usingPreviewData } from "./api.js";
 import { createBookCard, setStatus, showEmptyState } from "./render.js";
 
 const container = document.querySelector("#featured-books");
@@ -11,7 +11,7 @@ if (container && status) {
       setStatus(status, "Пока на полках нет книг.");
       showEmptyState(container, "Каталог пока пуст. Добавьте первую книгу.");
     } else {
-      setStatus(status, "");
+      setStatus(status, usingPreviewData ? "Демо-каталог: данные показаны без подключения к PostgreSQL." : "");
       container.replaceChildren(...books.slice(0, 3).map(createBookCard));
     }
   } catch (error) {

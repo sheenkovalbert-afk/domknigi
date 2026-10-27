@@ -1,4 +1,4 @@
-import { getJson } from "./api.js";
+import { getJson, usingPreviewData } from "./api.js";
 import { createBookCard, setStatus, showEmptyState } from "./render.js";
 
 const searchInput = document.querySelector("#book-search");
@@ -43,7 +43,7 @@ if (searchInput && categorySelect && catalog && status && resultCount) {
       return option;
     });
     categorySelect.append(...options);
-    setStatus(status, "");
+    setStatus(status, usingPreviewData ? "Демо-каталог: данные показаны без подключения к PostgreSQL." : "");
     renderFilteredBooks();
   } catch (error) {
     setStatus(status, "Не удалось загрузить каталог. Проверьте, что сервер и база данных запущены.", "error");

@@ -1,4 +1,4 @@
-import { getJson, coverForCategory } from "./api.js";
+import { getJson, coverForCategory, usingPreviewData } from "./api.js";
 import { setStatus } from "./render.js";
 
 const status = document.querySelector("#item-status");
@@ -32,7 +32,7 @@ if (status && content) {
       const cover = document.querySelector("#item-cover");
       cover.src = coverForCategory(book.categoryName);
       cover.alt = `Обложка книги «${book.title}»`;
-      setStatus(status, "");
+      setStatus(status, usingPreviewData ? "Демо-каталог: запись не связана с PostgreSQL." : "");
       content.hidden = false;
     } catch (error) {
       if (error.status === 404 || error.status === 400) {

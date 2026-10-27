@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="title desc">
+  <title id="title">Обложка в стиле приключений</title>
+  <desc id="desc">Обложка цвета морской волны с парусом и линией горизонта.</desc>
+  <rect width="760" height="400" fill="#e5e2d5"/>
+  <rect x="254" y="0" width="252" height="400" rx="4" fill="#3e716b"/>
+  <circle cx="434" cy="106" r="33" fill="#e1b578"/>
+  <path d="M380 100v152M375 109 316 225h59ZM385 128l58 97h-58Z" fill="#f0e5cd"/>
+  <path d="M287 242c27-18 52-18 79 0s53 18 80 0 52-18 80 0v36H287Z" fill="#2d5554"/>
+  <path d="M304 304h152M324 321h112M344 338h72" stroke="#e5d3b0" stroke-width="3" opacity=".8"/>
+  <path d="M112 119c32-27 71-28 103-1m-91 23c25-17 54-18 79-1" fill="none" stroke="#89918a" stroke-width="5" opacity=".7"/>
+</svg>

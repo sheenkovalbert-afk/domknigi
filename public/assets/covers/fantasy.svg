@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-labelledby="title desc">
+  <title id="title">Обложка в стиле фантастики</title>
+  <desc id="desc">Ночная синяя обложка с планетами, звёздами и золотой орбитой.</desc>
+  <rect width="760" height="400" fill="#dce2e2"/>
+  <rect x="254" y="0" width="252" height="400" rx="4" fill="#34485b"/>
+  <circle cx="380" cy="160" r="59" fill="#c9835d"/>
+  <ellipse cx="380" cy="160" rx="94" ry="26" fill="none" stroke="#e6c894" stroke-width="4" transform="rotate(-23 380 160)"/>
+  <circle cx="447" cy="127" r="8" fill="#e6c894"/>
+  <circle cx="312" cy="82" r="4" fill="#f5e8ca"/><circle cx="451" cy="72" r="5" fill="#f5e8ca"/>
+  <circle cx="324" cy="241" r="3" fill="#f5e8ca"/><circle cx="432" cy="250" r="4" fill="#f5e8ca"/>
+  <path d="M304 292h152M327 309h106M342 326h76" stroke="#e6c894" stroke-width="3" opacity=".8"/>
+  <path d="M116 304h54m-27-27v54" stroke="#83909a" stroke-width="4" opacity=".65"/>
+</svg>

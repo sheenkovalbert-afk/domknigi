@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Предложите книгу для каталога Дома книги.">
+    <title>Добавить книгу — Дом книги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/add.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a class="brand" href="index.html" aria-label="Дом книги — главная">
+          <span class="brand-mark" aria-hidden="true">ДК</span>
+          <span class="brand-name">Дом книги<small>место для новых историй</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="add.html" aria-current="page">Добавить книгу</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap page-main add-layout">
+      <section class="add-intro">
+        <p class="eyebrow">Новая история на полке</p>
+        <h1>Предложите книгу</h1>
+        <p>Заполните карточку книги. После отправки она появится в общем каталоге.</p>
+        <div class="side-note"><span aria-hidden="true">✦</span><p>Название, автор, год и категория помогут читателям найти вашу рекомендацию.</p></div>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <h2 id="form-title">Данные книги</h2>
+        <form id="book-form" novalidate>
+          <div class="field">
+            <label for="title">Название книги <span aria-hidden="true">*</span></label>
+            <input id="title" name="title" type="text" maxlength="200" required autocomplete="off" placeholder="Например, «Левша»">
+          </div>
+          <div class="field">
+            <label for="author">Автор <span aria-hidden="true">*</span></label>
+            <input id="author" name="author" type="text" maxlength="140" required autocomplete="name" placeholder="Имя и фамилия автора">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="year">Год издания <span aria-hidden="true">*</span></label>
+              <input id="year" name="year" type="number" min="1500" max="2100" required inputmode="numeric" placeholder="Например, 1881">
+            </div>
+            <div class="field">
+              <label for="category-id">Категория <span aria-hidden="true">*</span></label>
+              <select id="category-id" name="categoryId" required>
+                <option value="">Выберите категорию</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="description">Короткое описание <span aria-hidden="true">*</span></label>
+            <textarea id="description" name="description" rows="5" maxlength="2000" required placeholder="О чём эта книга и чем она вам запомнилась?"></textarea>
+          </div>
+          <p class="form-hint">Поля со звёздочкой обязательны.</p>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          <button class="button button-primary form-submit" id="submit-book" type="submit">Добавить в каталог <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="created-preview" id="created-preview" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>Дом книги <span aria-hidden="true">·</span> учебный проект</p>
+        <p>© <span id="current-year"></span> Читайте с удовольствием</p>
+      </div>
+    </footer>
+  </body>
+</html>

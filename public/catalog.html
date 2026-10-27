@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ищите книги библиотеки по названию и категории.">
+    <title>Каталог книг — Дом книги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/catalog.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a class="brand" href="index.html" aria-label="Дом книги — главная">
+          <span class="brand-mark" aria-hidden="true">ДК</span>
+          <span class="brand-name">Дом книги<small>место для новых историй</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html" aria-current="page">Каталог</a>
+          <a href="add.html">Добавить книгу</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap page-main">
+      <div class="page-intro">
+        <p class="eyebrow">Коллекция библиотеки</p>
+        <h1>Книжная полка</h1>
+        <p>Выберите категорию или введите название. Фильтры можно сочетать.</p>
+      </div>
+
+      <section class="catalog-tools" aria-label="Поиск и фильтры">
+        <div class="field search-field">
+          <label for="book-search">Поиск по названию</label>
+          <input id="book-search" name="search" type="search" placeholder="Например, «Солярис»" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="category-filter">Категория</label>
+          <select id="category-filter" name="category">
+            <option value="all">Все категории</option>
+          </select>
+        </div>
+      </section>
+      <div class="catalog-meta">
+        <p class="status-message" id="catalog-status" role="status">Загружаем каталог…</p>
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+      </div>
+      <section class="book-grid" id="catalog" aria-label="Книги" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>Дом книги <span aria-hidden="true">·</span> учебный проект</p>
+        <p>© <span id="current-year"></span> Читайте с удовольствием</p>
+      </div>
+    </footer>
+  </body>
+</html>

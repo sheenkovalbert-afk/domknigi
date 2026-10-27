@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Подробная информация о книге в каталоге Дома книги.">
+    <title>О книге — Дом книги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/item.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a class="brand" href="index.html" aria-label="Дом книги — главная">
+          <span class="brand-mark" aria-hidden="true">ДК</span>
+          <span class="brand-name">Дом книги<small>место для новых историй</small></span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html" aria-current="page">Каталог</a>
+          <a href="add.html">Добавить книгу</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap page-main">
+      <p class="breadcrumb"><a href="catalog.html">Каталог</a><span aria-hidden="true"> / </span>О книге</p>
+      <p class="status-message" id="item-status" role="status">Загружаем книгу…</p>
+      <article class="book-detail" id="item-content" hidden>
+        <div class="detail-cover-wrap">
+          <img class="detail-cover" id="item-cover" src="assets/covers/classics.svg" alt="">
+          <span class="cover-caption">Из коллекции<br>Дома книги</span>
+        </div>
+        <div class="detail-copy">
+          <p class="eyebrow" id="item-category"></p>
+          <h1 id="item-title"></h1>
+          <p class="detail-author" id="item-author"></p>
+          <p class="detail-year" id="item-year"></p>
+          <div class="detail-description" id="item-description"></div>
+          <a class="button button-primary" href="catalog.html">Вернуться в каталог <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>Дом книги <span aria-hidden="true">·</span> учебный проект</p>
+        <p>© <span id="current-year"></span> Читайте с удовольствием</p>
+      </div>
+    </footer>
+  </body>
+</html>
